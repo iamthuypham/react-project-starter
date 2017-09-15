@@ -1,0 +1,28 @@
+footer { text-align: center; }
+
+a { text-decoration: none; }
+
+.block { display: block; }
+
+.border-blue { border: 2px #6F88C2 solid; }
+.text-blue { color: #6F88C2; }
+
+.bg-grey { background-color: #E9E9E9; }
+.bg-light-grey { background-color: #F7F7F7; }
+.bg-white { background-color: white; }
+
+.circle {
+  border-radius: 100%;
+  background-color: #D8D8D8;
+  width: 2rem;
+  height: 2rem; }
+
+.flex-even {
+  display: flex;
+  justify-content: space-evenly; }
+
+.padded-below { padding-bottom: 1rem; }
+
+.padded-vertical { padding: 1.75rem 0 1.75rem 0; }
+
+.rounded { border-radius: 25px; }
