@@ -37,7 +37,7 @@ const Footer = () => (
       </div>
 
     </div>
-    <div className="bg-light-grey padded-vertical">
+    <div className="bg-light-grey padded-vertical text-grey">
       AsylumConnect, Inc. 2016. All rights reserved. Powered by One Degree.
     </div>
   </footer>
