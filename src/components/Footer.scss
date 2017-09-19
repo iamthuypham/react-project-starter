@@ -6,8 +6,7 @@ a { text-decoration: none; }
 
 .border-blue { border: 2px #6F88C2 solid; }
 
-.text-blue { color: #6F88C2; }
-.text-grey { color: #717171; }
+.bold { font-weight: bold; }
 
 .bg-grey { background-color: #E9E9E9; }
 .bg-light-grey { background-color: #F7F7F7; }
@@ -23,8 +22,19 @@ a { text-decoration: none; }
   display: flex;
   justify-content: space-evenly; }
 
-.padded-below { padding-bottom: 1rem; }
+.flex-button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between !important;
+}
 
+.padded-below { padding-bottom: 1rem; }
 .padded-vertical { padding: 1.75rem 0 1.75rem 0; }
 
 .rounded { border-radius: 25px; }
+
+.text-blue { color: #6F88C2; }
+.text-grey { color: #717171; }
+
+.uppercase { text-transform: uppercase; }

@@ -1,9 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from 'material-ui/Button';
+import ButtonBase from 'material-ui/ButtonBase';
+
+import withWidth from './withWidth';
+import AccountIcon from './icons/AccountIcon';
+import FavoritesIcon from './icons/FavoritesIcon';
+import LanguageIcon from './icons/LanguageIcon';
+import PrivacyIcon from './icons/PrivacyIcon';
+import SearchIcon from './icons/SearchIcon';
 
 require('./Footer.scss');
 
-const Footer = () => (
+const DesktopView = () => (
   <footer>
     <div className="bg-grey flex-even padded-vertical">
 
@@ -43,4 +52,53 @@ const Footer = () => (
   </footer>
 );
 
-export default Footer;
+const MobileFooterButton = ({ icon, text }) => (
+  <ButtonBase
+    focusRipple
+    className="flex-button bg-white uppercase"
+  >
+    {icon}
+    <span className="bold">{text}</span>
+  </ButtonBase>
+);
+
+MobileFooterButton.propTypes = {
+  icon: PropTypes.element.isRequired,
+  text: PropTypes.string.isRequired,
+}
+
+const MobileView = () => (
+  <footer className="flex-even">
+    <MobileFooterButton
+      icon={<SearchIcon />}
+      text="Search"
+    />
+    <MobileFooterButton
+      icon={<FavoritesIcon />}
+      text="Favorites"
+    />
+    <MobileFooterButton
+      icon={<LanguageIcon />}
+      text="Language"
+    />
+    <MobileFooterButton
+      icon={<AccountIcon />}
+      text="Account"
+    />
+    <MobileFooterButton
+      icon={<PrivacyIcon />}
+      text="Privacy"
+    />
+  </footer>
+);
+
+const Footer = ({width}) => {
+  if (width > 480)
+    return <DesktopView />
+  else
+    return <MobileView />
+};
+
+Footer.propTypes = { width: PropTypes.number.isRequired };
+
+export default withWidth(Footer);
