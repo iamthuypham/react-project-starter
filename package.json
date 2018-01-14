@@ -1,19 +1,15 @@
 {
-  "name": "asylum-connect-catalog",
+  "name": "IAmThuyPhamPortfolio",
   "version": "0.1.0",
-  "description": "Asylum Connect Catalog App powered by the One Degree API",
+  "description": "Thuy Pham's portfolio 2018",
   "engines": {
     "node": "6.2.2"
   },
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node server.js",
-    "web-prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=webpack.config.js",
-    "web-dev": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base public/ --config webpack.config.js --port 8080 --inline --hot --colors",
-    "postinstall": "webpack -p"
+    "start": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base public/ --config webpack.config.js --port $PORT --host $IP --inline --hot --colors"
   },
   "dependencies": {
-    "ajv": "^5.2.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
@@ -23,19 +19,15 @@
     "material-ui": "^0.19.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-google-maps": "^7.1.0",
     "react-router": "^4.2.0",
     "webpack": "^3.5.6"
   },
   "devDependencies": {
     "cross-env": "^5.0.5",
-    "request": "^2.81.0",
-    "tape": "^4.7.0",
     "webpack-dev-server": "^2.7.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeremyhatter/asylum-connect-1deg-catalog"
   },
   "keywords": [
     "node",
