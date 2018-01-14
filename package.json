@@ -27,7 +27,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "repository": {
-    "type": "git",
+    "type": "git"
   },
   "keywords": [
     "node",
