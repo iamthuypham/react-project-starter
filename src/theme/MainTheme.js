@@ -4,11 +4,23 @@ import breakpoints from './breakpoints';
 export default createMuiTheme({
   "direction": "ltr",
   palette: {
-    primaryDark: "",
-    primaryLight: "",
-    accentDark: "",
-    accentLight: "",
-    error: "",
+    primary: {
+      main: "#388e3c",
+      dark: "#00600f",
+      light: "#6abf69"
+    },
+    accent:{
+      main: "#ec407a",
+      dark: "#b4004e",
+      light: "#ff77a9"
+    },
+    error: {
+      dark: "",
+      light: ""
+    },
+    common: {
+      text: "#000000"
+    }
   },
   typography: {
     display4: {},
